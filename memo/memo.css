@@ -1,0 +1,77 @@
+/* 메모 컨테이너 */
+.memo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 메모 아이템 */
+.memo-item {
+    background: #fdffa3;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 메모 내용 */
+.memo-content {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.memo-content[contenteditable="true"] {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+/* 메모 체크박스 */
+.memo-check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(1.5);
+    z-index: 5;
+}
+
+/* 메모 액션 버튼 */
+.memo-actions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.memo-item:hover .memo-actions {
+    opacity: 1;
+}
+
+/* 메모 삭제 버튼 */
+.memo-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.memo-delete-btn:hover {
+    color: #e74c3c;
+}
+
+/* 완료된 메모 */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
